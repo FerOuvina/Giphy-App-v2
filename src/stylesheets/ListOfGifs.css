@@ -1,0 +1,31 @@
+:root {
+  --darkGreen: #2c6975;
+  --green: #68b2a0;
+  --lightGreen: #cde0c9;
+  --aquousGreen: #e0ecde;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.gifContainer > div {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.gifContainer h4 {
+  margin: .3rem 0;
+  font-size: 1.1rem;
+  color: var(--darkGreen);
+}
