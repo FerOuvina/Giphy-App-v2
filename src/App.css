@@ -28,7 +28,3 @@ body {
   align-items: center;
   margin: 1rem;
 }
-
-.header__fig > img{
-  cursor: pointer;
-}

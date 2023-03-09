@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Gif from "./Gif";
-import getGifs from "../services/getGifs";
+import useGifs from "../hooks/useGifs";
 import "../stylesheets/ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
   const { keyword } = params;
-  const [gifs, setGifs] = useState([]);
-  useEffect(
-    function () {
-      getGifs({ keyword }).then((gifs) => setGifs(gifs));
-    },
-    [keyword]
-  );
-
-  for (let i = 0; i < gifs.length; i++) {
-    if (gifs[i].title === "") {
-      gifs[i].title = "No Title";
-    }
-  }
+  const gifs = useGifs({ keyword });
 
   return (
     <div className="gifContainer">

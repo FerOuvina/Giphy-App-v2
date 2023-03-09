@@ -1,0 +1,12 @@
+:root {
+  --darkGreen: #2c6975;
+  --green: #68b2a0;
+  --lightGreen: #cde0c9;
+  --aquousGreen: #e0ecde;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

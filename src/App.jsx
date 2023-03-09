@@ -1,21 +1,22 @@
 import React from "react";
-import "./App.css";
-import ListOfGifs from "./components/ListOfGifs";
 import { Link, Route } from "wouter";
+import Home from "./pages/Home";
+import Logo from "./components/Logo";
+import Gifs from "./pages/Gifs";
+import Search from './components/Search'
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <section className="header">
-        <figcaption className="header__fig">
-          <Link to="/">
-            <img src="../public/Logo.png" alt="Page Logo" title="Home" />
-          </Link>
-        </figcaption>
+        <Logo />
+        <Search />
+        <Route component={Home} path="/Giphy-App-v2"></Route>
       </section>
 
       <section className="gifsContainer">
-        <Route component={ListOfGifs} path="/gif/:keyword" />
+        <Route component={Gifs} path="/search/:keyword" />
       </section>
     </div>
   );
