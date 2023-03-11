@@ -9,7 +9,7 @@ export default function ListOfTrendingGifs() {
   return (
     <div className="gifContainer">
       {gifs.map(({ title, id, url }) => (
-        <Gif title={title} url={url} key={id} />
+        <Gif title={title} url={url} key={id} id={id} />
       ))}
     </div>
   );
