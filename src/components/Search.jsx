@@ -9,7 +9,7 @@ export default function Search() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLocation(`/search/${keyword}`);
+    setLocation(`/Giphy-App-v2/search/${keyword}`);
   };
   const handleChange = (event) => {
     setKeyword(event.target.value);
