@@ -1,7 +1,7 @@
-const apiKey = "hFv8OeXUU3hh5g3av7nTj9gMJZxGgcmL";
+import { API_KEY, API_URL } from "./setting";
 
 export default async function getTrendingGifs() {
-  const apiURL = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=5&rating=g`;
+  const apiURL = `${API_URL}/gifs/trending?api_key=${API_KEY}&limit=5&rating=g`;
 
   const res = await fetch(apiURL);
   const response = await res.json();
