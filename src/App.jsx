@@ -6,6 +6,7 @@ import Gifs from "./pages/Gifs";
 import Search from "./components/Search";
 import GifDetail from "./components/GifDetail";
 import { GifsContextProvider } from "./context/gifContext";
+import TrendingSearches from "./components/TrendingSearches";
 import "./App.css";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <section className="header">
           <Logo />
           <Search />
-          <Route component={Home} path="/Giphy-App-v2"></Route>
+          <Route component={Home} path="/Giphy-App-v2" />
+          <Route component={TrendingSearches} path="/Giphy-App-v2" />
         </section>
         <section className="gifsContainer">
           <Route component={Gifs} path="/Giphy-App-v2/search/:keyword" />
