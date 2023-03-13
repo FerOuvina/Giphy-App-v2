@@ -8,7 +8,7 @@ export default function ListOfGifs({ params }) {
   const gifs = useGifs({ keyword });
 
   return (
-    <div className="gifContainer">
+    <div className="gifContainerMain">
       {gifs.map(({ title, id, url }) => (
         <Gif title={title} url={url} key={id} id={id} />
       ))}

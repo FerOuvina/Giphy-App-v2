@@ -20,6 +20,7 @@
 
 .homeContainer__titleContainer {
   padding: 0.8rem;
+  margin-bottom: 2rem;
   background-color: var(--darkGreen);
   border-radius: 10px;
   border: 1px solid var(--aquousGreen);

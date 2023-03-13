@@ -7,7 +7,7 @@ export default function ListOfTrendingGifs() {
   const gifs = useTrendingGifs();
 
   return (
-    <div className="gifContainer">
+    <div className="gifContainerMain">
       {gifs.map(({ title, id, url }) => (
         <Gif title={title} url={url} key={id} id={id} />
       ))}

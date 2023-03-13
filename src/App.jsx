@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route } from "wouter";
 import Home from "./pages/Home";
 import Logo from "./components/Logo";
@@ -22,6 +22,7 @@ function App() {
         <section className="gifsContainer">
           <Route component={Gifs} path="/Giphy-App-v2/search/:keyword" />
           <Route component={GifDetail} path="/Giphy-App-v2/gif/:id" />
+          <Route component={TrendingSearches} path="/Giphy-App-v2/gif/:id" />
         </section>
       </div>
     </GifsContextProvider>

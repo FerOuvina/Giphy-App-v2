@@ -12,19 +12,13 @@
   box-sizing: border-box;
 }
 
-.gifContainer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.gifContainer > div {
-  margin: 1rem;
-}
-
-.gifContainer h4 {
-  margin: .3rem 0;
-  font-size: 1.1rem;
-  color: var(--darkGreen);
+.gifContainerMain {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-auto-rows: auto;
+  grid-template-rows: min-content;
+  grid-auto-flow: row dense;
+  grid-gap: 2px;
+  align-items: center;
 }
