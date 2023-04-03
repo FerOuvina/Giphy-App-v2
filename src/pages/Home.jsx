@@ -1,5 +1,6 @@
 import React from "react";
 import ListOfTrendingGifs from "../components/ListOfTrendingGifs";
+import LazyTrending from "../components/TrendingLazy";
 import "../stylesheets/Home.css";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <h1 className="homeContainer__titleContainer--title">Trending Gifs</h1>
       </div>
       <ListOfTrendingGifs />
+      <LazyTrending />
     </div>
   );
 }
