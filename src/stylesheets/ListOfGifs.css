@@ -22,3 +22,52 @@
   grid-gap: 2px;
   align-items: center;
 }
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkGreen);
+  border-radius: 10px;
+  border: 1px solid var(--aquousGreen);
+}
+
+.btnContainer:hover {
+  background-color: var(--green);
+}
+
+.btnContainer > button {
+  font-size: 2rem;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--aquousGreen);
+  color: transparent;
+  background: linear-gradient(
+    #fd004c 16.7%,
+    #fe9000 16.7%,
+    #fe9000 33.4%,
+    #fff020 33.4%,
+    #fff020 50.1%,
+    #3edf4b 50.1%,
+    #3edf4b 66.8%,
+    #3363ff 66.8%,
+    #3363ff 83.5%,
+    #b102b7 83.5%
+  );
+  -webkit-text-stroke: 0.04em #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 1em;
+  animation: rainbow 30s linear infinite;
+}
+
+.btnContainer > button:active {
+  background: var(--lightGreen);
+  color: var(--darkGreen);
+}
+
+@keyframes rainbow {
+  100% {
+    background-position: 0 30rem;
+  }
+}
