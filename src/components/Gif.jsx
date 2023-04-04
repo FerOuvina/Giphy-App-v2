@@ -8,7 +8,6 @@ export default function Gif({ title, id, url }) {
       if (location.pathname.includes("gif")) {
         let gif = document.querySelector(".gifImg");
         gif.style.width = "800px";
-        console.log(gif);
       }
     }, 10);
   }
