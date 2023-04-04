@@ -1,7 +1,7 @@
 import { API_KEY, API_URL } from "./setting";
-export default async function getGifs({ keyword } = {}) {
+export default async function getGifs({ keyword, page = 0 } = {}) {
   const GIF__AMOUNT = 11;
-  const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${GIF__AMOUNT}&offset=0&rating=g&lang=en`;
+  const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${GIF__AMOUNT}&offset=${page * GIF__AMOUNT}&rating=g&lang=en`;
 
   const res = await fetch(apiURL);
   const response = await res.json();
