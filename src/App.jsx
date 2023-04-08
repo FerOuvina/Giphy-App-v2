@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Route } from "wouter";
 import Home from "./pages/Home";
 import Logo from "./components/Logo";
