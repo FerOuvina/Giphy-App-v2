@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import "../stylesheets/Gif.css";
 
-export default function Gif({ title, id, url }) {
+function Gif({ title, id, url }) {
   function inspectGif() {
     setTimeout(() => {
       if (location.pathname.includes("gif")) {
@@ -20,3 +20,5 @@ export default function Gif({ title, id, url }) {
     </div>
   );
 }
+
+export default React.memo(Gif);
