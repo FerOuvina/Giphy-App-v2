@@ -10,7 +10,6 @@ export default function ListOfGifs({ params }) {
   const { gifs, setPage } = useGifs({ keyword });
   const externalRef = useRef();
   const { isNearScreen } = useObserver({ distance : '200px', externalRef, once: false });
-  console.log(isNearScreen)
 
   const debounceHandleNextPage = useCallback(debounce(() => {
     setPage((prevPage) => prevPage + 1), 200
