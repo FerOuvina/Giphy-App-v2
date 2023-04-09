@@ -1,4 +1,4 @@
-import { API_KEY, API_URL, GIF__AMOUNT } from "./setting";
+import { API_KEY, API_URL, GIF__AMOUNT } from "./settings";
 export default async function getGifs({ keyword, page = 0 } = {}) {
   const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${GIF__AMOUNT}&offset=${page * GIF__AMOUNT}&rating=g&lang=en`;
 

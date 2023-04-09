@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from "./setting";
+import { API_KEY, API_URL } from "./settings";
 const ApiResponse = (apiResponse) => {
   const { data = [] } = apiResponse;
   return data;
