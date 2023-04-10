@@ -4,7 +4,7 @@ import gifContext from "../context/gifContext";
 
 const initialPage = 0;
 
-export default function useGifs({ keyword }) {
+export function useGifs({ keyword }) {
   const { gifs, setGifs } = useContext(gifContext);
   const [loadingPage, setLoadingPage] = useState();
   const [page, setPage] = useState(initialPage);
