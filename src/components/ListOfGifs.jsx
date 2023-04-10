@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import Gif from "./Gif";
-import useGifs from "../hooks/useGifs";
+import {useGifs} from "../hooks/useGifs";
 import "../stylesheets/ListOfGifs.css";
 import useObserver from "../hooks/useObserver";
 import debounce from "just-debounce-it";
