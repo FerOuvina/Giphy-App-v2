@@ -11,8 +11,11 @@ function Gif({ title, id, url }) {
       }
     }, 10);
   }
+  if (location.pathname.includes("gif")) {
+    inspectGif();
+  }
   return (
-    <div className="gif" onClick={inspectGif}>
+    <div className="gif">
       <Link to={`/Giphy-App-v2/gif/${id}`} className="gif__link">
         <h4>{title}</h4>
         <img src={url} alt={title} className="gifImg" />
