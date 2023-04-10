@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useGifs } from "./useGifs";
 
 export default function useGifById({ id }) {
-  const { gifs } = useGifs();
+  const { gifs } = useGifs({});
   const gifFromCache = gifs.find((singleGif) => singleGif.id === id);
 
   const [gif, setGif] = useState(gifFromCache);
