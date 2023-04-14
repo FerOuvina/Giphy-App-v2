@@ -1,22 +1,27 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import getTrendingGifs from "../services/getTrendingGifs";
 import gifContext from "../context/gifContext";
 
 export default function useTrendingGifs() {
-  // const [gifs, setGifs] = useState([]);
   const { gifs, setGifs } = useContext(gifContext);
+  const [Loading, setLoading] = useState(false);
+
   useEffect(
     function () {
-      getTrendingGifs().then((gifs) => setGifs(gifs));
+      setLoading(true);
+      getTrendingGifs().then((gifs) => {
+        setGifs(gifs);
+        setLoading(false);
+      });
     },
-    [setGifs]
+    [setGifs, setLoading]
   );
-  
+
   for (let i = 0; i < gifs.length; i++) {
     if (gifs[i].title === "") {
       gifs[i].title = "No Title";
     }
   }
 
-  return gifs;
+  return { gifs, Loading };
 }

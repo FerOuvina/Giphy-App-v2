@@ -4,7 +4,7 @@ import useTrendingGifs from "../hooks/useTrendingGifs";
 import "../stylesheets/ListOfGifs.css";
 
 export default function ListOfTrendingGifs() {
-  const gifs = useTrendingGifs();
+  const { gifs } = useTrendingGifs();
 
   return (
     <div className="gifContainerMain">
