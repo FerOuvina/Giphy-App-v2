@@ -21,7 +21,7 @@ export default function Search() {
         <input
           onChange={handleChange}
           type="text"
-          placeholder="Search something..."
+          placeholder="Search gifs here..."
         />
         <div className="formContainer__form--btnContainer">
           <button type="submit">
