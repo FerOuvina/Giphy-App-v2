@@ -26,6 +26,7 @@ export default function ({ params }) {
     <>
       <Helmet>
         <title>{title}</title>
+        <meta name="description" content={`Description of ${title}`} />
       </Helmet>
       <Gif {...gif} />;
     </>

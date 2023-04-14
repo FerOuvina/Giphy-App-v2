@@ -24,6 +24,7 @@ export default function Home() {
       <Helmet>
         <title>Giphy | Awesome Gifs</title>
         <meta name="rating" content="General" />
+        <meta name="description" content="Gif searcher" />
         </Helmet>
       <div className="homeContainer__titleContainer">
         <h1 className="homeContainer__titleContainer--title">Trending Gifs</h1>

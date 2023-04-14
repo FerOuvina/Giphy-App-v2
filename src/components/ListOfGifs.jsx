@@ -47,6 +47,7 @@ export default function ListOfGifs({ params }) {
     <div>
       <Helmet>
         <title>{title}</title>
+        <meta name="description" content={`${title}`} />
       </Helmet>
       <div className="gifContainerMain">
         {gifs.map(({ title, id, url }) => (
