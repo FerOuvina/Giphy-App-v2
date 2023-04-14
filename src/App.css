@@ -27,6 +27,10 @@ body {
   align-items: center;
 }
 
+.appWrapper {
+  width: 80%;
+}
+
 .header {
   margin: 1rem;
 }
