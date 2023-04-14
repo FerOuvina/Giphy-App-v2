@@ -6,12 +6,17 @@ const initialPage = 0;
 
 export function useGifs({ keyword }) {
   const { gifs, setGifs } = useContext(gifContext);
+  const [Loading, setLoading] = useState(false);
   const [loadingPage, setLoadingPage] = useState();
   const [page, setPage] = useState(initialPage);
 
   useEffect(
     function () {
-      getGifs({ keyword }).then((gifs) => setGifs(gifs));
+      setLoading(true)
+      getGifs({ keyword }).then((gifs) => {
+        setGifs(gifs)
+        setLoading(false)
+      });
     },
     [keyword, setGifs]
   );
@@ -36,5 +41,5 @@ export function useGifs({ keyword }) {
     }
   }
 
-  return { gifs, loadingPage, setPage };
+  return { gifs, loadingPage, setPage, Loading };
 }
