@@ -4,6 +4,7 @@ import { useGifs } from "../hooks/useGifs";
 import useObserver from "../hooks/useObserver";
 import debounce from "just-debounce-it";
 import Spinner from "../components/LoadingSpinner";
+import { Helmet } from "react-helmet";
 import "../stylesheets/ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
@@ -30,10 +31,23 @@ export default function ListOfGifs({ params }) {
     [debounceHandleNextPage, isNearScreen]
   );
 
-  if (Loading) return <Spinner />;
+  const title = gifs ? decodeURI(`Searching ${keyword} gifs | Giphy`) : "";
+
+  if (Loading)
+    return (
+      <>
+        <Helmet>
+          <title>Loading...</title>
+        </Helmet>
+        <Spinner />
+      </>
+    );
 
   return (
     <div>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <div className="gifContainerMain">
         {gifs.map(({ title, id, url }) => (
           <Gif title={title} url={url} key={id} id={id} />

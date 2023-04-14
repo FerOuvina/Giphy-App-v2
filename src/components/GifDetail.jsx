@@ -2,14 +2,32 @@ import React from "react";
 import { Redirect } from "wouter";
 import useGifById from "../hooks/useGifById";
 import Gif from "./Gif";
-import Spinner from '../components/LoadingSpinner'
+import Spinner from "../components/LoadingSpinner";
+import { Helmet } from "react-helmet";
 
 export default function ({ params }) {
   const { gif, Loading, Error } = useGifById({ id: params.id });
 
-  if (Loading) return <Spinner />;
-  if (Error) return <Redirect to={'404'} />;
+  const title = gif ? gif.title : "";
+
+  if (Loading)
+    return (
+      <>
+        <Helmet>
+          <title>Loading...</title>
+        </Helmet>
+        <Spinner />
+      </>
+    );
+  if (Error) return <Redirect to={"404"} />;
   if (!gif) return null;
 
-  return <Gif {...gif} />;
+  return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <Gif {...gif} />;
+    </>
+  );
 }
