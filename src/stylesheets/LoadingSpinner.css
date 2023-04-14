@@ -16,6 +16,10 @@
   75% { background: #1aafd0 }
  100% { background: #3be8b0 }
 }
+.container {
+  display: flex;
+  justify-content: center;
+}
 .ldio-9k0lcfnjnsr div {
   position: absolute;
   width: 28.96px;
@@ -47,7 +51,7 @@
   height: 181px;
   display: inline-block;
   overflow: hidden;
-  background: #f1f2f3;
+  background: #18061F;
 }
 .ldio-9k0lcfnjnsr {
   width: 100%;
