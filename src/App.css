@@ -1,18 +1,24 @@
 :root {
-  --darkGreen: #2c6975;
-  --green: #68b2a0;
-  --lightGreen: #cde0c9;
-  --aquousGreen: #e0ecde;
+  --red: #c73866;
+  --lightRed: #fe676e;
+  --orange: #fd8f52;
+  --lightOrange: #ffbd71;
+  --yellow: #ffdca2;
+  --green: #00FF99;
+  --cyan: #00CCFF;
+  --purple: #9933FF;
+  --gifShadow-size: 4px;
+  font-family: fantasy;
 }
 
-* {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
-  background-color: var(--aquousGreen);
+  background-color: #18061F;
 }
 
 .App {
@@ -30,4 +36,5 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }

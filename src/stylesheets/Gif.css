@@ -8,7 +8,6 @@
   height: 100%;
   text-decoration: none;
   display: block;
-  text-decoration: none;
   position: relative;
 }
 
@@ -45,4 +44,57 @@
 .gif:nth-child(10n + 3) {
 	grid-column: span 2;
 	grid-row: span 2;
+}
+
+.gif:nth-child(5n + 1) img {
+  background-color: var(--cyan);
+}
+.gif:nth-child(5n + 2) img {
+  background-color: var(--yellow);
+}
+.gif:nth-child(5n + 3) img {
+  background-color: var(--orange);
+}
+.gif:nth-child(5n + 4) img {
+  background-color: var(--green);
+}
+.gif:nth-child(5n + 5) img {
+  background-color: var(--purple);
+}
+
+.gif:hover:nth-child(5n + 1) {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--cyan);
+}
+.gif:hover:nth-child(5n + 2) {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--yellow);
+}
+.gif:hover:nth-child(5n + 3) {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--orange);
+}
+.gif:hover:nth-child(5n + 4) {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--green);
+}
+.gif:hover:nth-child(5n + 5) {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--purple);
+}
+
+.gif:hover:nth-child(5n + 1) h4 {
+	background-color: var(--cyan);
+	color: black;
+}
+.gif:hover:nth-child(5n + 2) h4 {
+	background-color: var(--yellow);
+	color: black;
+}
+.gif:hover:nth-child(5n + 3) h4 {
+	background-color: var(--orange);
+	color: white;
+}
+.gif:hover:nth-child(5n + 4) h4 {
+	background-color: var(--green);
+	color: black;
+}
+.gif:hover:nth-child(5n + 5) h4 {
+	background-color: var(--purple);
+	color: white;
 }

@@ -1,22 +1,9 @@
-:root {
-  --darkGreen: #2c6975;
-  --green: #68b2a0;
-  --lightGreen: #cde0c9;
-  --aquousGreen: #e0ecde;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .formContainer {
-  margin: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   padding: .6em;
-  border-radius: 5px;
+  background-color: #18061F;
 }
 
 .formContainer__form {
@@ -29,10 +16,10 @@
   padding: .2rem 1rem;
   font-size: 1.5rem;
   border-radius: 10px 0 0 10px;
-  background-color: var(--darkGreen);
-  border: 1px solid var(--aquousGreen);
+  background-color: white;
+  border: 1px solid white;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.11);
-  color: var(--aquousGreen);
+  color: black;
 }
 
 .formContainer__form > input::placeholder {
@@ -40,7 +27,7 @@
 }
 
 .formContainer__form > input:focus {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--cyan);
 }
 
 .formContainer__form--btnContainer {
@@ -53,17 +40,18 @@
   font-size: 1.5rem;
   padding: .2rem;
   border-radius: 0 10px 10px 0;
-  background-color: var(--darkGreen);
-  border: 1px solid var(--aquousGreen);
+  background-color: var(--purple);
+  border: 1px solid white;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.11);
-  color: var(--aquousGreen);
+  color: black;
 }
 
 .formContainer__form--btnContainer > button:hover {
-  background-color: var(--green);
+  background-color: var(--red);
+  color: white;
 }
 
 .formContainer__form--btnContainer > button:active {
-  background: var(--lightGreen);
-  color: var(--darkGreen);
+  background: var(--lightRed);
+  color: white;
 }

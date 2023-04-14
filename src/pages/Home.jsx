@@ -9,8 +9,10 @@ export default function Home() {
       <div className="homeContainer__titleContainer">
         <h1 className="homeContainer__titleContainer--title">Trending Gifs</h1>
       </div>
-      <ListOfTrendingGifs />
-      <LazyTrending />
+      <div className="flexContainer">
+        <ListOfTrendingGifs />
+        <LazyTrending />
+      </div>
     </div>
   );
 }

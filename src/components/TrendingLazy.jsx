@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import useObserver from "../hooks/useObserver";
 import Spinner from "./LoadingSpinner";
+import "../stylesheets/Trending.css";
+
 
 const TrendingSearches = React.lazy(() => import("./TrendingSearches"));
 
@@ -9,7 +11,7 @@ export default function LazyTrending() {
 
   return (
     <Suspense fallback={<Spinner />}>
-      <div ref={fromRef}>{isNearScreen ? <TrendingSearches /> : null}</div>
+      <div className="trendingSearchesContainer" ref={fromRef}>{isNearScreen ? <TrendingSearches /> : null}</div>
     </Suspense>
   );
 }

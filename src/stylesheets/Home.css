@@ -1,16 +1,3 @@
-:root {
-  --darkGreen: #2c6975;
-  --green: #68b2a0;
-  --lightGreen: #cde0c9;
-  --aquousGreen: #e0ecde;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -21,10 +8,6 @@
 .homeContainer__titleContainer {
   padding: 0.8rem;
   margin-bottom: 2rem;
-  background-color: var(--darkGreen);
-  border-radius: 10px;
-  border: 1px solid var(--aquousGreen);
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.11);
 }
 
 .homeContainer__titleContainer--title {
@@ -53,4 +36,8 @@
   100% {
     background-position: 0 30rem;
   }
+}
+
+.flexContainer {
+  display: flex;
 }
