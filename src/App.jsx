@@ -6,7 +6,6 @@ import Gifs from "./pages/Gifs";
 import Search from "./components/Search";
 import GifDetail from "./components/GifDetail";
 import { GifsContextProvider } from "./context/gifContext";
-import LazyTrending from "./components/TrendingLazy";
 import Error from "./pages/404";
 import "./App.css";
 
@@ -23,7 +22,6 @@ function App() {
           <Route component={Error} path="/Giphy-App-v2/gif/404" />
           <Route component={Gifs} path="/Giphy-App-v2/search/:keyword" />
           <Route component={GifDetail} path="/Giphy-App-v2/gif/:id" />
-          <Route component={LazyTrending} path="/Giphy-App-v2/gif/:id" />
         </section>
       </div>
     </GifsContextProvider>
