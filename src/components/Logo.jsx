@@ -7,7 +7,7 @@ export default function Logo() {
     <div className="logoContainer">
       <figcaption className="logoContainer__fig">
         <Link to="/Giphy-App-v2">
-          <img src="../public/Logo.png" alt="Page Logo" title="Home" />
+          <img src="/Logo.png" alt="Page Logo" title="Home" />
         </Link>
       </figcaption>
     </div>
