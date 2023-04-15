@@ -5,11 +5,12 @@ import useObserver from "../hooks/useObserver";
 import debounce from "just-debounce-it";
 import Spinner from "../components/LoadingSpinner";
 import { Helmet } from "react-helmet";
+import { RATINGS } from "../services/settings";
 import "../stylesheets/ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
-  const { keyword } = params;
-  const { gifs, setPage, Loading } = useGifs({ keyword });
+  const { keyword, rating = RATINGS[0] } = params;
+  const { gifs, setPage, Loading } = useGifs({ keyword, rating });
   const externalRef = useRef();
   const { isNearScreen } = useObserver({
     distance: "200px",
