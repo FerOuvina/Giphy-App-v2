@@ -4,7 +4,7 @@ import gifContext from "../context/gifContext";
 
 const initialPage = 0;
 
-export function useGifs({ keyword }) {
+export function useGifs({ keyword, rating }) {
   const { gifs, setGifs } = useContext(gifContext);
   const [Loading, setLoading] = useState(false);
   const [loadingPage, setLoadingPage] = useState();
@@ -13,12 +13,12 @@ export function useGifs({ keyword }) {
   useEffect(
     function () {
       setLoading(true)
-      getGifs({ keyword }).then((gifs) => {
+      getGifs({ keyword, rating }).then((gifs) => {
         setGifs(gifs)
         setLoading(false)
       });
     },
-    [keyword, setGifs]
+    [keyword, setGifs, rating]
   );
 
   useEffect(
@@ -27,7 +27,7 @@ export function useGifs({ keyword }) {
 
       setLoadingPage(true);
 
-      getGifs({ keyword, page }).then((moreGifs) => {
+      getGifs({ keyword, page, rating }).then((moreGifs) => {
         setGifs((prevGifs) => prevGifs.concat(moreGifs));
         setLoadingPage(false);
       });
