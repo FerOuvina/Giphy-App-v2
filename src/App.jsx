@@ -21,7 +21,7 @@ function App() {
           </section>
           <section className="gifsContainer">
             <Route component={Error} path="/Giphy-App-v2/gif/404" />
-            <Route component={Gifs} path="/Giphy-App-v2/search/:keyword" />
+            <Route component={Gifs} path="/Giphy-App-v2/search/:keyword/:rating?" />
             <Route component={GifDetail} path="/Giphy-App-v2/gif/:id" />
           </section>
         </div>
