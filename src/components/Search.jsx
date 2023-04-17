@@ -3,7 +3,14 @@ import useLocation from "wouter/use-location";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { RATINGS } from "../services/settings";
 import useForm from "../hooks/useForm";
-import "../stylesheets/Search.css";
+import {
+  FormContainer,
+  FormContainer__Form,
+  FormContainer__FormSelect,
+  FormContainer__FormInput,
+  FormContainer__FormBtn__Container,
+  FormContainer__FormBtn__Btn,
+} from "../styles/Search";
 
 export default function Search({
   initialRating = RATINGS[0],
@@ -37,26 +44,29 @@ export default function Search({
   };
 
   return (
-    <div className="formContainer">
-      <form onSubmit={handleSubmit} className="formContainer__form">
-        <select className="formContainer__form--select" onChange={handleRatingChange} value={rating}>
+    <FormContainer>
+      <FormContainer__Form
+        onSubmit={handleSubmit}
+        className="formContainer__form"
+      >
+        <FormContainer__FormSelect onChange={handleRatingChange} value={rating}>
           <option disabled>Select Rating</option>
           {RATINGS.map((rating) => (
             <option key={rating}>{rating}</option>
           ))}
-        </select>
-        <input
+        </FormContainer__FormSelect>
+        <FormContainer__FormInput
           onChange={handleChange}
           type="text"
           placeholder="Search gifs here..."
           className="input"
         />
-        <div className="formContainer__form--btnContainer">
-          <button type="submit">
+        <FormContainer__FormBtn__Container>
+          <FormContainer__FormBtn__Btn>
             <AiOutlineFileSearch />
-          </button>
-        </div>
-      </form>
-    </div>
+          </FormContainer__FormBtn__Btn>
+        </FormContainer__FormBtn__Container>
+      </FormContainer__Form>
+    </FormContainer>
   );
 }
