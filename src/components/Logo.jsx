@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "wouter";
-import { LogoContainer, LogoContainerImg } from "../styles/Logo";
+import { LogoContainer, LogoContainerImg } from "../styled components/Logo";
 
 export default function Logo() {
   return (
