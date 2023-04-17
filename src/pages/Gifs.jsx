@@ -1,11 +1,11 @@
 import React from "react";
 import ListOfGifs from "../components/ListOfGifs";
-import "../stylesheets/Gifs.css";
+import { GifsContainer } from "../styled components/Gifs";
 
 export default function Gifs({ params }) {
   return (
-    <div className="gifContainer">
+    <GifsContainer>
       <ListOfGifs params={params} />
-    </div>
+    </GifsContainer>
   );
 }
