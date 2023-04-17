@@ -1,0 +1,64 @@
+@keyframes ldio-9k0lcfnjnsr {
+   0% { transform: translate(14.48px,76.02px) scale(0); }
+  25% { transform: translate(14.48px,76.02px) scale(0); }
+  50% { transform: translate(14.48px,76.02px) scale(1); }
+  75% { transform: translate(76.02px,76.02px) scale(1); }
+ 100% { transform: translate(137.56px,76.02px) scale(1); }
+}
+@keyframes ldio-9k0lcfnjnsr-r {
+   0% { transform: translate(137.56px,76.02px) scale(1); }
+ 100% { transform: translate(137.56px,76.02px) scale(0); }
+}
+@keyframes ldio-9k0lcfnjnsr-c {
+   0% { background: #3be8b0 }
+  25% { background: #ffb900 }
+  50% { background: #6a67ce }
+  75% { background: #1aafd0 }
+ 100% { background: #3be8b0 }
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.ldio-9k0lcfnjnsr div {
+  position: absolute;
+  width: 28.96px;
+  height: 28.96px;
+  border-radius: 50%;
+  transform: translate(76.02px,76.02px) scale(1);
+  background: #3be8b0;
+  animation: ldio-9k0lcfnjnsr 3.7037037037037033s infinite cubic-bezier(0,0.5,0.5,1);
+}
+.ldio-9k0lcfnjnsr div:nth-child(1) {
+  background: #1aafd0;
+  transform: translate(137.56px,76.02px) scale(1);
+  animation: ldio-9k0lcfnjnsr-r 0.9259259259259258s infinite cubic-bezier(0,0.5,0.5,1), ldio-9k0lcfnjnsr-c 3.7037037037037033s infinite step-start;
+}.ldio-9k0lcfnjnsr div:nth-child(2) {
+  animation-delay: -0.9259259259259258s;
+  background: #3be8b0;
+}.ldio-9k0lcfnjnsr div:nth-child(3) {
+  animation-delay: -1.8518518518518516s;
+  background: #1aafd0;
+}.ldio-9k0lcfnjnsr div:nth-child(4) {
+  animation-delay: -2.7777777777777777s;
+  background: #6a67ce;
+}.ldio-9k0lcfnjnsr div:nth-child(5) {
+  animation-delay: -3.7037037037037033s;
+  background: #ffb900;
+}
+.loadingio-spinner-ellipsis-120pq448a5zq {
+  width: 181px;
+  height: 181px;
+  display: inline-block;
+  overflow: hidden;
+  background: #18061F;
+}
+.ldio-9k0lcfnjnsr {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.ldio-9k0lcfnjnsr div { box-sizing: content-box; }
