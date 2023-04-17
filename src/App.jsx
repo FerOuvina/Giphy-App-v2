@@ -7,6 +7,7 @@ import Search from "./components/Search";
 import GifDetail from "./components/GifDetail";
 import { GifsContextProvider } from "./context/gifContext";
 import Error from "./pages/404";
+import { GifsContainer } from "./styled components/Gifs";
 import "./App.css";
 
 function App() {
@@ -19,11 +20,11 @@ function App() {
             <Search />
             <Route component={Home} path="/Giphy-App-v2" />
           </section>
-          <section className="gifsContainer">
+          <GifsContainer>
             <Route component={Error} path="/Giphy-App-v2/404" />
             <Route component={Gifs} path="/Giphy-App-v2/search/:keyword/:rating?" />
             <Route component={GifDetail} path="/Giphy-App-v2/gif/:id" />
-          </section>
+          </GifsContainer>
         </div>
       </main>
     </GifsContextProvider>
