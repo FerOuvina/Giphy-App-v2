@@ -6,7 +6,7 @@ import debounce from "just-debounce-it";
 import Spinner from "../components/LoadingSpinner";
 import { Helmet } from "react-helmet";
 import { RATINGS } from "../services/settings";
-import "../stylesheets/ListOfGifs.css";
+import { GifContainer } from "../styled components/Gif";
 
 export default function ListOfGifs({ params }) {
   const { keyword, rating = RATINGS[0] } = params;
@@ -45,17 +45,17 @@ export default function ListOfGifs({ params }) {
     );
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={`${title}`} />
       </Helmet>
-      <div className="gifContainerMain">
+      <GifContainer>
         {gifs.map(({ title, id, url }) => (
           <Gif title={title} url={url} key={id} id={id} />
         ))}
-      </div>
+      </GifContainer>
       <div className="watch" ref={externalRef}></div>
-    </div>
+    </>
   );
 }
