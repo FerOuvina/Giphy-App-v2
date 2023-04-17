@@ -19,7 +19,7 @@ export default function ({ params }) {
         <Spinner />
       </>
     );
-  if (Error) return <Redirect to={"404"} />;
+  if (Error) return <Redirect to={"/Giphy-App-v2/404"} />;
   if (!gif) return null;
 
   return (
