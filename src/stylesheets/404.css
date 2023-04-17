@@ -1,0 +1,18 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorContainer__btn > button {
+  cursor: pointer;
+  margin: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  background-color: var(--lightOrange);
+  border: 2px solid var(--lightOrange);
+}
+
+.errorContainer__btn > button:hover {
+  box-shadow: 0 0 0 4px var(--lightOrange);
+}
