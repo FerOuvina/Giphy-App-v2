@@ -10,7 +10,7 @@ import {
   FormContainer__FormInput,
   FormContainer__FormBtn__Container,
   FormContainer__FormBtn__Btn,
-} from "../styles/Search";
+} from "../styled components/Search";
 
 export default function Search({
   initialRating = RATINGS[0],
