@@ -65,6 +65,22 @@ export const GifContainer = styled.section`
     background-color: var(--purple);
     color: white;
   }
+
+  :nth-of-type(5n + 1) img {
+    background-color: var(--cyan);
+  }
+  :nth-of-type(5n + 2) img {
+    background-color: var(--yellow);
+  }
+  :nth-of-type(5n + 3) img {
+    background-color: var(--orange);
+  }
+  :nth-of-type(5n + 4) img {
+    background-color: var(--green);
+  }
+  :nth-of-type(5n + 5) img {
+    background-color: var(--purple);
+  }
 `;
 
 export const LinkStyled = styled(Link)`
@@ -89,20 +105,4 @@ export const ImgStyled = styled.img`
   vertical-align: top;
   height: inherit;
   object-fit: cover;
-
-  :nth-of-type(5n + 1) {
-    background-color: var(--cyan);
-  }
-  :nth-of-type(5n + 2) {
-    background-color: var(--yellow);
-  }
-  :nth-of-type(5n + 3) {
-    background-color: var(--orange);
-  }
-  :nth-of-type(5n + 4) {
-    background-color: var(--green);
-  }
-  :nth-of-type(5n + 5) {
-    background-color: var(--purple);
-  }
 `;
