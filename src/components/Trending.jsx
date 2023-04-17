@@ -1,27 +1,36 @@
 import React from "react";
-import { Link } from "wouter";
-import "../stylesheets/Trending.css";
+import {
+  TrendingSearches,
+  TrendingSearches__list,
+  TrendingSearches__listContainer,
+  TrendingSearches__listItem,
+  TrendingSearches__listLink,
+  TrendingSearches__titleContainer,
+} from "../styled components/Trending";
 
 export default function Trending({ name, options = [] }) {
   return (
-    <div className="trendingSearches">
-      <div className="trendingSearches__titleContainer">
-        <h1 className="trendingSearches__titleContainer--title">{name}</h1>
-      </div>
-      <div className="trendingSearches__listContainer">
-        <ul className="trendingSearches__list">
+    <TrendingSearches>
+      <TrendingSearches__titleContainer>
+        <h1>{name}</h1>
+      </TrendingSearches__titleContainer>
+      <TrendingSearches__listContainer>
+        <TrendingSearches__list>
           {options.map((eachOption) => (
-            <li key={eachOption} className="trendingSearches__list--li">
-              <Link
+            <TrendingSearches__listItem
+              key={eachOption}
+              className="trendingSearches__list--li"
+            >
+              <TrendingSearches__listLink
                 to={`/Giphy-App-v2/search/${eachOption}`}
                 className="trendingSearches__list--li-link"
               >
                 {eachOption}
-              </Link>
-            </li>
+              </TrendingSearches__listLink>
+            </TrendingSearches__listItem>
           ))}
-        </ul>
-      </div>
-    </div>
+        </TrendingSearches__list>
+      </TrendingSearches__listContainer>
+    </TrendingSearches>
   );
 }
