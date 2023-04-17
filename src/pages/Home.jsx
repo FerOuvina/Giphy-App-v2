@@ -4,7 +4,11 @@ import Spinner from "../components/LoadingSpinner";
 import LazyTrending from "../components/TrendingLazy";
 import useTrendingGifs from "../hooks/useTrendingGifs";
 import { Helmet } from "react-helmet";
-import "../stylesheets/Home.css";
+import {
+  FlexContainer,
+  HomeWrapper,
+  HomeWrapper__TitleContainer,
+} from "../styled components/Home";
 
 export default function Home() {
   const { Loading } = useTrendingGifs();
@@ -20,19 +24,19 @@ export default function Home() {
     );
 
   return (
-    <div className="homeContainer">
+    <HomeWrapper>
       <Helmet>
         <title>Giphy | Awesome Gifs</title>
         <meta name="rating" content="General" />
         <meta name="description" content="Gif searcher" />
-        </Helmet>
-      <div className="homeContainer__titleContainer">
-        <h1 className="homeContainer__titleContainer--title">Trending Gifs</h1>
-      </div>
-      <div className="flexContainer">
+      </Helmet>
+      <HomeWrapper__TitleContainer>
+        <h1>Trending Gifs</h1>
+      </HomeWrapper__TitleContainer>
+      <FlexContainer>
         <ListOfTrendingGifs />
         <LazyTrending />
-      </div>
-    </div>
+      </FlexContainer>
+    </HomeWrapper>
   );
 }
