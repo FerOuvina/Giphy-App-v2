@@ -6,7 +6,7 @@ import debounce from "just-debounce-it";
 import Spinner from "../components/LoadingSpinner";
 import { Helmet } from "react-helmet";
 import { RATINGS } from "../services/settings";
-import { GifContainer } from "../styled components/Gif";
+import { GifContainer } from "../styled components/ListOfGifs";
 
 export default function ListOfGifs({ params }) {
   const { keyword, rating = RATINGS[0] } = params;

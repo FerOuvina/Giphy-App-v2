@@ -1,7 +1,7 @@
 import React from "react";
 import Gif from "./Gif";
 import useTrendingGifs from "../hooks/useTrendingGifs";
-import { GifContainer } from "../styled components/Gif";
+import { GifContainer } from "../styled components/ListOfGifs";
 
 export default function ListOfTrendingGifs() {
   const { gifs } = useTrendingGifs();
