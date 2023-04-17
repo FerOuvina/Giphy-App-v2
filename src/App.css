@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 :root {
   --red: #c73866;
@@ -6,22 +6,23 @@
   --orange: #fd8f52;
   --lightOrange: #ffbd71;
   --yellow: #ffdca2;
-  --green: #00FF99;
-  --cyan: #00CCFF;
-  --purple: #9933FF;
+  --green: #00ff99;
+  --cyan: #00ccff;
+  --purple: #9933ff;
   --gifShadow-size: 4px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
 body {
-  background-color: #18061F;
+  background-color: #18061f;
 }
 
 .App {
@@ -36,4 +37,64 @@ body {
 
 .header {
   margin: 1rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .appWrapper {
+    width: 100%;
+  }
+
+  .header {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .appWrapper {
+    width: 100%;
+  }
+
+  .header {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  .appWrapper {
+    width: 90%;
+  }
+
+  .header {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  .appWrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .appWrapper {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) {
+  .appWrapper {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) {
+  .appWrapper {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) {
+  .appWrapper {
+    width: 100%;
+  }
 }
