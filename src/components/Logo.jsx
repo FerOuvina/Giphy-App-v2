@@ -1,15 +1,19 @@
 import React from "react";
 import { Link } from "wouter";
-import "../stylesheets/Logo.css";
+import { LogoContainer, LogoContainerImg } from "../styles/Logo";
 
 export default function Logo() {
   return (
-    <div className="logoContainer">
-      <figcaption className="logoContainer__fig">
+    <LogoContainer>
+      <figcaption>
         <Link to="/Giphy-App-v2">
-          <img src="/Logo.png" alt="Page Logo" title="Home" />
+          <LogoContainerImg
+            src="/Logo.png"
+            alt="Page Logo"
+            title="Home"
+          ></LogoContainerImg>
         </Link>
       </figcaption>
-    </div>
+    </LogoContainer>
   );
 }
