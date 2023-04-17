@@ -1,13 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "wouter";
-import '../stylesheets/404.css'
+import { ErrorContainer, Button } from "../styles/404";
 
-const gifsID = [
-  "14uQ3cOFteDaU",
-  "9J7tdYltWyXIY",
-  "UoeaPqYrimha6rdTFV",
-];
+const gifsID = ["14uQ3cOFteDaU", "9J7tdYltWyXIY", "UoeaPqYrimha6rdTFV"];
 
 export default function Error() {
   const randomGif = () => {
@@ -17,24 +13,20 @@ export default function Error() {
   };
 
   return (
-    <div className="errorContainer">
+    <ErrorContainer>
       <Helmet>
         <title>Error 404 | Giffy</title>
       </Helmet>
 
-      <div className="errorContainer__gif">
-        <img
-          src={randomGif()}
-          alt="error 404 gif not found"
-          className="errorContainer__gif--img"
-        />
-      </div>
+      <img
+        src={randomGif()}
+        alt="error 404 gif not found"
+        className="errorContainer__gif--img"
+      />
 
-      <div className="errorContainer__btn">
-        <Link to="/Giphy-App-v2">
-          <button>Go back home</button>
-        </Link>
-      </div>
-    </div>
+      <Link to="/Giphy-App-v2">
+        <Button>Go back home</Button>
+      </Link>
+    </ErrorContainer>
   );
 }
