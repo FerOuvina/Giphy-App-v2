@@ -39,7 +39,7 @@ export default function Search({
   return (
     <div className="formContainer">
       <form onSubmit={handleSubmit} className="formContainer__form">
-        <select onChange={handleRatingChange} value={rating}>
+        <select className="formContainer__form--select" onChange={handleRatingChange} value={rating}>
           <option disabled>Select Rating</option>
           {RATINGS.map((rating) => (
             <option key={rating}>{rating}</option>
