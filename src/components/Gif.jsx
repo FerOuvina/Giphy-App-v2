@@ -1,5 +1,5 @@
 import React from "react";
-import { GifContainer, LinkStyled, H4Styled, ImgStyled } from "../styles/Gif";
+import { GifContainer, LinkStyled, H4Styled, ImgStyled } from "../styled components/Gif";
 
 function Gif({ title, id, url }) {
   function inspectGif() {
