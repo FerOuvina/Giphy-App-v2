@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "wouter";
-import { ErrorContainer, Button } from "../styles/404";
+import { ErrorContainer, Button } from "../styled components/404";
 
 const gifsID = ["14uQ3cOFteDaU", "9J7tdYltWyXIY", "UoeaPqYrimha6rdTFV"];
 
