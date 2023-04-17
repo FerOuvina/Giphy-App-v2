@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 :root {
   --red: #c73866;
   --lightRed: #fe676e;
@@ -8,8 +10,9 @@
   --cyan: #00CCFF;
   --purple: #9933FF;
   --gifShadow-size: 4px;
-  font-family: fantasy;
+  font-family: 'Roboto', sans-serif;
 }
+
 
 *, ::after, ::before {
   margin: 0;
